@@ -1,0 +1,8 @@
+# Clonar repositório
+git clone
+
+# Criar branch:
+git branch
+
+# Enviar para um diretório remoto
+git push -u <local-remoto> <nome-da-branch>
