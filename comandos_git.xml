@@ -1,3 +1,6 @@
+TREINAMENTO GIT
+LINK: https://github.com/PauloGoncalvesBH/treinamento-git#vis%C3%A3o-geral
+
 # Git config
 $ git config –global user.name “Seu nome”
 $ git config –global user.email “Seu email”
