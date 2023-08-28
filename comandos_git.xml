@@ -114,3 +114,6 @@ $ git diff <branch de origem> <branch de destino>
 
 # Esse comando Git oferece uma alternativa gráfica ao commit
 $ git citool
+
+# Informações de log, mas em formato raw:
+$ git whatchanged
