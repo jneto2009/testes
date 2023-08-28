@@ -2,37 +2,48 @@
 $ git config –global user.name “Seu nome”
 $ git config –global user.email “Seu email”
 
+
 # Inicializar um repositório git
 $ git init
+
 
 # Clonar repositório
 $ git clone
 
+
 # Criar branch:
 $ git branch
+
 
 # Enviar para um diretório remoto
 $ git push -u <local-remoto> <nome-da-branch>
 
+
 # Como ver as branches
 $ git branch ou git branch --list
 
+
 # Como excluir uma branch:
 $ git branch -d <nome-da-branch>
+
 
 # Exibir lista de commits e informações básicas
 $ git log
 # Para exibir cada em uma só linha:
 $ git log --oneline
 
+
 # Entrar numa branch para trabalhar nela
 $ git checkout <nome-da-branch>
+
 
 # Criar nova branch e já alternar para ela
 $ git checkout -b <nome-da-branch>
 
+
 # Exibir os status atual das modificações na branch
 $ git status
+
 
 # Adicionar arquivos modificados para a lista de mudanças do git
 $ git add 
@@ -40,6 +51,7 @@ $ git add
 $ git add .
 ou
 $ git add -A
+
 
 # Git commit:
 $ git commit
@@ -49,13 +61,16 @@ $ git commit -a
 # Git commit com mensagem breve
 $ git commit -m "mensagem do commit" - Precisa estar entre aspas
 
+
 # Upload dos seus commits no repositório remoto.
 $ git push <repositório-remoto> <nome-da-branch>
+
 
 # Entretanto, se a sua branch foi recém-criada, também é preciso fazer o upload da branch com o seguinte comando:
 $ git push --set-upstream <repositório-remoto> <nome-da-branch>
 ou
 $ git push -u origin <nome-da-branch>
+
 
 # Git pull - Usado para obter as atualizações de um repositório remoto. 
 # Esse comando é uma combinação de git fetch e git merge, o que significa que, quando usamos git pull, 
@@ -63,9 +78,11 @@ $ git push -u origin <nome-da-branch>
 # mais recentes em seu espaço de trabalho local (git merge).
 $ git pull <repositório-remoto>
 
+
 # Reverter commits
 $ git revert <codigo(s)_do(s)_commit(s)>
 # Para finalizar a tela pressionar Esc e :wq (w = write e q = quit)
+
 
 # Fazer o merge (mesclar) da branch com a branch pai (dev ou master/main, em geral):
 $ git merge
@@ -77,8 +94,10 @@ $ git fetch
 - Por fim, faça o merge da sua branch do recurso em dev:
 $ git merge <nome-da-branch-com-o-recurso>
 
+
 # Estabelecer uma conexão entre seu repositório local e um repositório remoto.
 $ git remote add <nomecurto> <url>
+
 
 # Armazena temporariamente seus arquivos modificados em uma área chamada stash (“esconderijo”), 
 # sem interagir com os outros arquivos até ser necessário.
@@ -88,23 +107,30 @@ $ git stash list
 - Quando for o momento de aplicar o conteúdo do stash a um branch, usamos o parâmetro “apply”:
 $ git stash apply
 
+
 # Detalhes específicos sobre um commit que o log não mostra
 $ git show <hash_do_commit>
+
 
 # Remover arquivos da sua pasta
 $ git rm <nome_do_arquivo>
 
+
 # Aplicar um commit específico de um branch (local ou remoto) no seu branch atual:
 $ git cherry-pick <commit-hash>
+
 
 # Zipar um diretório Git
 $ git archive –format zip HEAD > archive-HEAD.zip
 
+
 # Comando dedo-duro exibe qual usuário editou qual commit em determinado arquivo
 $ git blame <nome_do_arquivo>
 
+
 # Aplicar TAGS
 $ git tag -a v1.0.0
+
 
 # Comparar dois arquivos gits ou dois branches
 1. Comparando o repositório ativo com o repositório local: 
@@ -112,8 +138,10 @@ $ git diff HEAD <nome_do_arquivo>
 2. Comparando duas ramificações: 
 $ git diff <branch de origem> <branch de destino>
 
+
 # Esse comando Git oferece uma alternativa gráfica ao commit
 $ git citool
+
 
 # Informações de log, mas em formato raw:
 $ git whatchanged
