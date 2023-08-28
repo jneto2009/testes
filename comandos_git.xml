@@ -60,7 +60,7 @@ git pull <repositório-remoto>
 
 # Reverter commits
 git revert <codigo(s)_do(s)_commit(s)>
-Para finalizar a tela pressionar Shift + q
+Para finalizar a tela pressionar Esc e :wq (w = write e q = quit)
 
 # Fazer o merge (mesclar) da branch com a branch pai (dev ou master/main, em geral):
 git merge
