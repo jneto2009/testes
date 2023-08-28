@@ -6,3 +6,16 @@ git branch
 
 # Enviar para um diretório remoto
 git push -u <local-remoto> <nome-da-branch>
+
+# Como ver as branches
+git branch ou git branch --list
+
+# Como excluir uma branch:
+git branch -d <nome-da-branch>
+
+# Exibir lista de commits e informações básicas
+git log
+
+# Entrar numa branch para trabalhar nela
+git checkout <nome-da-branch>
+
