@@ -6,6 +6,10 @@ $ git config –global user.name “Seu nome”
 $ git config –global user.email “Seu email”
 
 
+# Escolhendo o edior padrão de commits:
+$ git config --global core.editor "your-editor-here"
+# Troque your-editor-here por vim, nano, ou o comando de iniciar seu editor preferido.
+
 # Inicializar um repositório git
 $ git init
 
@@ -24,6 +28,8 @@ $ git push -u <local-remoto> <nome-da-branch>
 
 # Como ver as branches
 $ git branch ou git branch --list
+# Ver também branches remotas conhecidas pelo local:
+$ git branch -a
 
 
 # Como excluir uma branch:
@@ -34,6 +40,16 @@ $ git branch -d <nome-da-branch>
 $ git log
 # Para exibir cada em uma só linha:
 $ git log --oneline
+# Exibição gráfica do histórico:
+$ git log --graph
+ou
+$git log --graph --oneline
+
+
+# Ver o que mudou no seu Working Directory:
+$ git diff
+# Para mostrar quais mudanças já estão na Staging Area, podemos executar:
+$ git diff --staged
 
 
 # Entrar numa branch para trabalhar nela
@@ -64,22 +80,49 @@ $ git commit -a
 # Git commit com mensagem breve
 $ git commit -m "mensagem do commit" - Precisa estar entre aspas
 
+# Alterando o último commit (ammend)
 
-# Upload dos seus commits no repositório remoto.
+
+
+# Upload dos seus commits locais no repositório remoto
 $ git push <repositório-remoto> <nome-da-branch>
-
-
 # Entretanto, se a sua branch foi recém-criada, também é preciso fazer o upload da branch com o seguinte comando:
 $ git push --set-upstream <repositório-remoto> <nome-da-branch>
 ou
 $ git push -u origin <nome-da-branch>
 
 
-# Git pull - Usado para obter as atualizações de um repositório remoto. 
+# Buscando alterações no repositório remoto
+$ git fetch
+
+# Download de commits remotos no repositório local
+$ git pull
+ou
+$ git pull <repositório-remoto>
 # Esse comando é uma combinação de git fetch e git merge, o que significa que, quando usamos git pull, 
 # ele recebe as atualizações do repositório remoto (git fetch) e aplica imediatamente as alterações 
 # mais recentes em seu espaço de trabalho local (git merge).
-$ git pull <repositório-remoto>
+# Git pull com rebase:
+$ git pull --rebase (ou a abreviação git pull -r)
+
+# Rebase interativo:
+$ git rebase -i <hash_anterior> ou <HEAD~N> (N = número de commits incluídos no rebase)
+# No rebase interativo você decide o que deseja fazer com cada commit, e pode inclusive alterar a ordem deles 
+# na lista exibida para que um commit interaja com o outro pela ordem em que o comando age neles. 
+
+
+# Escondendo alterações com stash:
+$ git stash
+# Reaplicando ultima alteração escondidas (removendo da pilha de escondidas):
+$ git stash pop
+# Reaplicando ultima alteração escondidas (mantendo na pilha de escondidas):
+$ git stash apply
+# Listar entradas individuais escondidas:
+$ git stash list
+# Mostrar alterações da última entrada no stash:
+$ git stash show
+# Cria um branch a partir do HEAD no momento em que você armazenou as alterações e aplica as alterações armazenadas nessa branch.
+$ git stash branch <nome_do_branch>
 
 
 # Reverter commits
@@ -121,6 +164,10 @@ $ git rm <nome_do_arquivo>
 
 # Aplicar um commit específico de um branch (local ou remoto) no seu branch atual:
 $ git cherry-pick <commit-hash>
+# Cherry-pick de uma lista de commits
+$ git cherry pick hash1 hash2 hash3...
+# Cherry-pick de um ponto à outro na lista de branches:
+$ git cherry-pick <from>..<to>
 
 
 # Zipar um diretório Git
@@ -148,3 +195,6 @@ $ git citool
 
 # Informações de log, mas em formato raw:
 $ git whatchanged
+
+# Remover arquivos não rastreados (untracked)
+git clean -f -x
