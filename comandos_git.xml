@@ -45,6 +45,9 @@ $ git log --graph
 ou
 $git log --graph --oneline
 
+# Exibir todas as alterações de todos os banchs, todo o histórico
+$ git reflog
+
 
 # Ver o que mudou no seu Working Directory:
 $ git diff
