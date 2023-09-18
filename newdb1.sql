@@ -68,11 +68,6 @@ ALTER TABLE pessoas ADD signo CHAR(30);
 
 SELECT * FROM pessoas;
 
-INSERT INTO pessoas (id, nome, nascimento, sexo, peso, altura, nacionalidade) VALUES 
-(DEFAULT, 'José', '1987/06/09', 'M', '60', '1.65', 'Brasil'),
-(DEFAULT, 'Djalma', '1932/08/27', 'M', '62', '1.65', 'Brasil'),
-(DEFAULT, 'Maria José', '1959/07/13', 'F', '56', '1.63', 'Brasil');
-
 INSERT INTO pessoas (id, nome, nascimento, sexo, peso, altura, nacionalidade) VALUES (DEFAULT, 'Jonathas', '1985/11/25', 'M', '58', '1.70', 'Brasil');
 
 UPDATE pessoas
