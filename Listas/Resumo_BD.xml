@@ -1,0 +1,31 @@
+Banco de Dados Orientado a Objetos:
+
+    Objetos que compartilham características semelhantes são agrupados em
+classes. Uma classe é uma coleção de objetos semelhantes com estrutura
+compartilhada (atributos) e comportamento (métodos). O método de uma classe
+representa uma ação no mundo real, como encontrar o nome de uma pessoa
+selecionada, alterar o nome de uma pessoa ou imprimir o endereço de uma
+pessoa.
+
+    As classes são organizadas em uma hierarquia de classes. A hierarquia de
+classe se assemelha a uma árvore invertida na qual cada classe tem apenas um
+pai. Por exemplo, a classe CLIENTE e a classe EMPREGADO compartilham
+uma classe pai PESSOA, o que chamamos de herança.
+
+    A herança é a capacidade de um objeto dentro da hierarquia de classe herdar
+os atributos e métodos das classes acima dele. Por exemplo, duas classes, 
+CLIENTE e EMPREGADO, podem ser criadas como subclasses da classe
+PESSOA. Nesse caso, CLIENTE e EMPREGADO herdarão todos os atributos
+e métodos de PESSOA.
+
+- As vantagens oferecidas por esse modelo são as seguintes:
+• Apresentação visual inclui conteúdo significativo
+• Alta integridade do banco de dados
+• Independência estrutural e de dados
+- Quanto às desvantagens:
+• Falta de normas e padrões bem definidos
+• Acesso complexo aos dados de navegação
+• Curva de aprendizagem íngreme
+    Exemplos de sistemas de gerenciamento de banco de dados orientados a
+objetos incluem os bancos de dados CACHÉ, DB4Objects, VERSANT, JASMIN
+e MATISSE.
