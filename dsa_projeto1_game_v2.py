@@ -125,7 +125,7 @@ def game():
         print("\n")
         
         # Tentativa
-        tentativa = input("\nDigite uma letra: ")
+        tentativa = input("\nDigite uma letra: ").lower()
         
         # Condicional
         if tentativa in letras_tentativas:
